@@ -3,7 +3,7 @@ body{
             color: white;
 }
 .danh-sach-muc{
-            list-style: none;
+            list-style-type: none;
             display: flex;
             gap: 10px;
             align-items: center;
@@ -11,11 +11,11 @@ body{
 .lien-ket-muc{
     text-decoration: none;
     color:#DBDBDD;
+    font-weight: bold;
 }
 header{
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
     align-items:center;
 }
 
@@ -32,14 +32,13 @@ header{
 }
 .avata{
     width:40px;
-    border-radius: 10px;
+    border-radius: 50px;
 }
 .dang-chon{
     background-color: #4E4B52;
     color:white;
 }
 .banner{
-    background-color:aliceblue;
     width:95%;
     /* height:40vh; */
     margin:20px auto;
@@ -48,43 +47,35 @@ header{
 .banner-anh{
     width:100%;
     border-radius: 20px;
-    justify-content: center;
 }
 .danh-sach-the-loai{
     width:95%;
-    margin:10px auto;
+    height: 20vh;
+    margin:20px auto;
 }
 .phim{
     display:flex;
-    gap: 12px;
-    align-items: stretch;
-    width: max-content;
-    min-width: 100%;
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    
 }
 .phim-poster{
-    flex: 0 0 240px;
-    width: 240px;
-    height: 20vh;
-    object-fit: cover;
-    border-radius: 15px;
-    display: block;
+    width: 16%;
+    height: 19vh;
+    border-radius: 20px;
 }
-.danh-sach-phim{
-    display:block;
-    width:100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    scrollbar-width: thin;
+
+h3{
+    margin:30px 0px 5px 0px;
 }
 .danh-sach-nhan-vat{
     display:flex;
     justify-content: space-between;
+
 }
 .nhan-vat{
     width:25%;
     height:20vh;
+    border-radius: 50%;
     img{
         width:150px;
         border-radius: 55%;
@@ -93,20 +84,29 @@ header{
 }
 
 .footer-lien-ket {
-    width: 70%; 
-    margin: 60px auto 40px auto; 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    row-gap: 16px; 
-    column-gap: 20px; 
+    display: flex;
+    justify-content: space-between;
+    width: 48%;      
+    margin: 20px auto;
 }
-
+.ket-muc{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 .footer-lien-ket a {
     color: #808080; 
     font-size: 13px;
     text-decoration: none;
+   
 }
 
 .footer-lien-ket a:hover {
     color: #b3b3b3;
+}
+.copyright{
+    color: #808080;
+    font-size: 13px;
+    width: 48%;
+    margin: 0 auto 40px auto;
 }

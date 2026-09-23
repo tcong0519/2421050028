@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-1</title>
+</head>
+<body>
+    <!-- Internal JavaScript -->
+    <script>
+        //in ra man hinh
+        document.writeln("Hello 2 <br>");
+        //khai bao bien
+        var ten = "Thanh Cong <br>";
+
+        document.writeln(ten);
+
+        ten = "My <br>";
+        document.writeln(ten);
+
+        var namNay = 2026;
+        document.writeln(namNay);
+
+        //Phep toan
+        // cong +
+        var so1=10;
+        var so2=5;
+        var ketQua = 0;
+        ketQua = so1 + so2;
+        document.write("<br> Ket qua cong 2 so: ");
+        document.write(ketQua);
+
+        //phep tru
+        var so1=10;
+        var so2=5;
+        var ketQua = 0;
+        ketQua = so1 - so2;
+        document.write("<br> Ket qua tru 2 so: ");
+        document.write(ketQua);
+
+        //phep nhan
+        var so1=10;
+        var so2=5;
+        var ketQua = 0;
+        ketQua = so1 * so2;
+        document.write("<br> Ket qua chia 2 so: ");
+        document.write(ketQua);
+
+        //phep chia
+        var so1=10;
+        var so2=5;
+        var ketQua = 0;
+        ketQua = so1/so2;
+        document.write("<br> Ket qua chia 2 so: ");
+        document.write(ketQua);
+
+        //phep chia lay du
+        var so1=10;
+        var so2=5;
+        var ketQua = 0;
+        ketQua = so1 % so2;
+        document.write("<br> Ket qua chia du 2 so: ");
+        document.write(ketQua);
+
+        // ++
+        document.writeln("<br>");
+        document.writeln(++so1);
+        document.writeln("<br>");
+        // document.writeln(so1);
+        // document.writeln("<br>");
+
+        // --       
+        document.writeln(--so1);
+        document.writeln("<br>"); 
+
+        // +=
+        so1+=so2;
+        document.writeln(so1);
+        document.writeln("<br>"); 
+
+        // -=
+        so1-=so2;
+        document.writeln(so1);
+        document.writeln("<br>"); 
+
+        var ho = "Tran "
+        document.writeln(ho + ten);
+        document.writeln("<br>");
+        document.writeln(ho.length);
+        // Kiem tra kieu du lieu cua bien
+        document.writeln(typeof(ho));
+        document.write("<br>")
+        //
+        var hoVaTen= "Nguyen Thanh Cong";
+        //tim kiem
+        document.writeln(hoVaTen.indexOf("Q"));
+        document.write("<br>")
+        //boolean
+        document.writeln(hoVaTen.includes("e"));
+        document.write("<br>")
+        // tim kiem
+        document.writeln(hoVaTen.startsWith("Nguyen"));
+        document.write("<br>")
+
+        //thay the
+        document.writeln(hoVaTen.replace("Thanh","Van"));
+        document.write("<br>")
+
+        //viet hoa toan bo
+        document.writeln(hoVaTen.toUpperCase());
+        document.writeln("<br>")
+        //viet thuong
+        document.writeln(hoVaTen.toLocaleLowerCase());
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
