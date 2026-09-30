@@ -111,6 +111,125 @@
         document.writeln("<br>")
         //viet thuong
         document.writeln(hoVaTen.toLocaleLowerCase());
+
+        //date
+        var homNay= new Date();
+        document.writeln("<br>");
+        document.writeln(homNay);
+
+        var ngay= new Date("9/9/2025");
+        document.writeln("<br>");
+        document.writeln(ngay);
+
+        var namNay = homNay.getFullYear();
+        document.writeln("<br>");
+        document.writeln(namNay);
+
+        var thangNay = homNay.getMonth();
+        document.writeln("<br>");
+        document.writeln(thangNay);
+
+        var ngayNay = homNay.getDay();
+        document.writeln("<br>");
+        document.writeln(ngayNay);
+
+        var thu = homNay.getDate();
+        document.writeln("<br>");
+        document.writeln(thu);
+        document.writeln("hom nay la thu " + thu );
+
+        var arrSo = [1, 2, 3, 4, 5];
+        document.writeln("<br>");
+        document.writeln(arrSo[4]); 
+        document.writeln("<br>");
+
+        var arrTen = ["cong", "my"];
+        document.writeln(arrTen.length); 
+
+        var arr = [1, 2, 3, 4, 5, "cong", "my"];
+        var d = arr .concat(arrSo, arrTen);
+        document.writeln("<br>");
+        document.writeln(d.join("-"));
+        //lay ra phan tu cuoi
+        document.writeln("<br>");
+        document.writeln(d.pop());
+
+        //them vao 
+        document.writeln("<br>");
+        d.push("cong");
+
+        document.writeln("<br>");
+        document.writeln(d);
+        document.writeln("<br>")
+        document.writeln(arrSo.reverse());
+
+        //Object
+        var thongTinSV = {
+            ten: "Nguyen Thanh Cong",
+            namSinh: 2006,
+            queQuan: {
+                xa: "Hoa Loc",
+                thanhPho: "Thanh Hoa"
+            }
+        };
+
+        document.writeln("<br>");
+        document.writeln(thongTinSV.queQuan.thanhPho);
+        tuoi = namNay - thongTinSV.namSinh;
+        document.writeln("<br>")
+        document.writeln(tuoi);
+        thongTinSV.tuoi = tuoi;
+        // console.log(thongTinSV);
+        document.writeln("<br>");
+        thongTinSV.gioiTinh = true;
+
+        var danhSach = [
+                {
+                ten: "Nguyen Thanh Cong",
+                namSinh: 2006,
+                queQuan: {
+                    xa: "Hoa Loc",
+                    thanhPho: "Thanh Hoa"
+                }
+            },
+
+            {
+                ten: "Tran Huong My",
+                namSinh: 2006,
+                queQuan: {
+                    xa: "Hoa Loc",
+                    thanhPho: "Nam Dinh"
+                }
+            }
+        ];
+        // console.log(danhSach);
+
+
+        // == !- >< 
+        // === so sanh ca gia tri va kieu du lieu
+        var so1 = 10;
+        var so2 = '10';
+        document.writeln("<br>");
+        document.writeln(so1===so2);
+
+        if(thu>6){
+            document.writeln("Cuoi tuan")
+        }
+        else if(thu == 4){
+            document.writeln("sap dc nghi")
+        }
+        else{
+            document.writeln("Di hoc")
+        }
+        var so = 50000000000000000001;
+        document.writeln("<br>");
+        if(so%2==0){
+            document.writeln("so chan");
+        }
+        else
+        {
+            document.writeln("so le");
+        }
     </script>
     <script src="script.js"></script>
 </body>
