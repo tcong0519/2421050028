@@ -16,7 +16,7 @@
         .danh-sach-muc{
             /* bo dau cham o danh sach khi dung ul,li */
             list-style: none;
-            display: flex;
+            display: flex;     
             /* gap khoang cach cac doi tuong o trong */
             gap: 20px;
         }

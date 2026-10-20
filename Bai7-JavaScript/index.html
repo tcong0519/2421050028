@@ -221,15 +221,90 @@
         else{
             document.writeln("Di hoc")
         }
-        var so = 50000000000000000001;
+        var so = "50000000000000000001";
+        var doDai = so.length;
+        var soCuoiCung = so[doDai -1];
         document.writeln("<br>");
-        if(so%2==0){
+
+        if(soCuoiCung%2==0){
             document.writeln("so chan");
         }
         else
         {
             document.writeln("so le");
         }
+
+
+        // switch case
+        var d  = new Date();
+        var theDay = d.getDay();
+        switch (theDay){
+            case 5:
+                document.write("Finally Friday");
+                break;
+            case 6:
+                document.write("Super Saturday");
+                break;
+            case 0: 
+                document.write("Sleepy Sunday");
+                break;
+            default:
+                document.write("I'm looking forward to this weekend!");
+        }
+
+        //vong lap for
+        for (var i=1;i<=5;i++){
+            document.writeln("<br>");
+            document.writeln("I love u");
+        }   
+
+        // mang
+         var b = [1, 2, 3, 4, "a", "b", "c"];
+        for (var i = 0; i < b.length; i++) 
+        {
+            document.writeln("<br>");
+            document.writeln(b[i]);
+        }
+
+        for (var i = 0; i < b.length; i++) 
+        {
+            if (isNaN(b[i]))
+            {
+                document.writeln("<br>");
+                document.writeln("Xin chao " + b[i]);
+            }
+        }
+        document.writeln("<br>");
+
+        // while
+        var j=0;
+        while(j<=5){
+            document.writeln("The number is " + j);
+            document.write("<br>");
+            j++;
+        }
+
+        var i =0;
+        do{
+            document.writeln("The number is " + i);
+            document.write("<br>");
+            i++;
+        }while(i<=5)
+
+        //popup boxes  ( hien canh bao trang web)
+        // alert("hello");
+        // var r = confirm("Press a buttton");
+        // if (r==true){
+        //     document.write("Oke!");
+        // }
+        // else{
+        //     document.write("Cancel!");
+        // }
+
+        var r = prompt("Nhap vao ho ten", "Nhap ten o day");
+        document.write(r);
+
+        
     </script>
     <script src="script.js"></script>
 </body>

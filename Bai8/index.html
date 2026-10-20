@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 8</title>
+</head>
+<body>
+    <script>
+        //fucntion
+        function sayHello(){
+            document.writeln("Hello");
+        }
+        sayHello();
+        document.write("<br>");
+
+        function sayHello2(ten){
+            document.write("Xin chao ban " + ten);
+        }
+        sayHello2("Thanh Cong");
+        document.write("<br>");
+        sayHello2("Huong My")
+        document.write("<br>");
+        var r1 = Number(prompt("Nhap vao so 1", ""));
+        var r2 = Number(prompt("Nhap vao so 2", ""));
+        function sum(a1,a2){
+            if(!isNaN(a1) && !isNaN(a2)){
+                return a1+a2;
+            }
+        }
+        document.write(sum(r1,r2));
+
+        // btvn
+        // Viet ham tinh diem chu dua tren 3 dau diem A B C
+        // tong = A*0,6 + B * 0,3 +C*0,1  => diem chu tuong ung
+        function tinhDiemChu(A, B, C) {
+        const tong = A * 0.6 + B * 0.3 + C * 0.1;
+        
+        if (tong >= 9.0) return "A+";
+        if (tong >= 8.5) return "A";
+        if (tong >= 8.0) return "B+";
+        if (tong >= 7.0) return "B";
+        if (tong >= 6.5) return "C+";
+        if (tong >= 5.5) return "C";
+        if (tong >= 5.0) return "D+";
+        if (tong >= 4.0) return "D";
+        
+        return "F";
+    }
+    console.log(tinhDiemChu(9, 9, 9));
+    </script>  
+</body>
+</html>
