@@ -6,34 +6,56 @@
     <title>Bai 8</title>
 </head>
 <body>
+    <div>
+        Nhap diem A: <input id="diemA" type="number">
+    </div>
+    <div>
+        Nhap diem B: <input id="diemB" type="number">
+    </div>
+    <div>
+        Nhap diem C: <input id="diemC" type="number">
+    </div>
+    <div>
+        <button onclick="tinhDiem()">Tinh diem</button>
+    </div>
+    <div>
+        Kết Quả: <input id="ketQua" type="text">
+    </div>
+    <div>
+        Nhap nam sinh: <input id="nSinh" type="number">
+    </div>
+    <div>
+        <button onclick="tinhTuoi()">
+            Tinh Tuoi
+        </button>
+    </div>
+    <div>
+        Tuoi cua ban la: <input id="tuoi" type="text">
+    </div>
     <script>
-        //fucntion
-        function sayHello(){
-            document.writeln("Hello");
-        }
-        sayHello();
-        document.write("<br>");
+        function tinhDiem(){
+            var a = parseFloat(document.getElementById("diemA").value); 
+            var b = parseFloat(document.getElementById("diemB").value);
+            var c = parseFloat(document.getElementById("diemC").value);
+            // document.write("Diem A la: " + a);
+            // document.write("<br>Diem B la: " + b);
+            // document.write("<br>Diem C la: " + c);
+            // document.write("<br>");
+            // document.write("Diem cua ban la: " + tinhDiemChu(a,b,c));
+            document.getElementById("ketQua").value = tinhDiemChu(a,b,c);
 
-        function sayHello2(ten){
-            document.write("Xin chao ban " + ten);
         }
-        sayHello2("Thanh Cong");
-        document.write("<br>");
-        sayHello2("Huong My")
-        document.write("<br>");
-        var r1 = Number(prompt("Nhap vao so 1", ""));
-        var r2 = Number(prompt("Nhap vao so 2", ""));
-        function sum(a1,a2){
-            if(!isNaN(a1) && !isNaN(a2)){
-                return a1+a2;
-            }
+        function tinhTuoi(){
+            var x = parseInt(document.getElementById("nSinh").value);
+            var namHienTai = new Date().getFullYear();
+            var ans = namHienTai - x;
+            document.getElementById("tuoi").value = ans;
         }
-        document.write(sum(r1,r2));
 
-        // btvn
-        // Viet ham tinh diem chu dua tren 3 dau diem A B C
-        // tong = A*0,6 + B * 0,3 +C*0,1  => diem chu tuong ung
-        function tinhDiemChu(A, B, C) {
+        function tinhDiemChu(A,B,C) {
+        // var A = document.getElementById("diemA").value;
+        // var B = document.getElementById("diemB").value;
+        // var C = document.getElementById("diemC").value;
         const tong = A * 0.6 + B * 0.3 + C * 0.1;
         
         if (tong >= 9.0) return "A+";
@@ -47,7 +69,41 @@
         
         return "F";
     }
-    console.log(tinhDiemChu(9, 9, 9));
+
+        //fucntion
+        function sayHello(){
+            document.writeln("Hello");
+        }
+        sayHello();
+        document.write("<br>");
+
+        function sayHello2(ten){
+            document.write("Xin chao ban " + ten);
+        }
+        sayHello2("Thanh Cong");
+        document.write("<br>");
+        // sayHello2("Huong My")
+        // document.write("<br>");
+        // var r1 = Number(prompt("Nhap vao so 1", ""));
+        // var r2 = Number(prompt("Nhap vao so 2", ""));
+        function sum(a1,a2){
+            if(!isNaN(a1) && !isNaN(a2)){
+                return a1+a2;
+            }
+        }
+        document.write(sum(r1,r2)); 
+
+        // btvn
+        // Viet ham tinh diem chu dua tren 3 dau diem A B C
+        // tong = A*0,6 + B * 0,3 +C*0,1  => diem chu tuong ung
+        
+   // console.log(tinhDiemChu(9, 9, 9));
+
+    // ép kiểu về số nguyên
+    // parseInt("42");
+
+    
+    
     </script>  
 </body>
 </html>
