@@ -28,8 +28,11 @@
     </header>
     
     <main>
-        <div class="banner">
+        <div onclick="xemTrailer()" class="banner">
             <img class="banner-anh" src="../anh/anh.jpg">
+        </div>
+        <div style="display: none;" class="banner">
+            <iframe class="banner-anh" src="https://www.youtube.com/embed/hA4WIVn4YH8?si=i87Vrb3Llx9tSzV-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="danh-sach-the-loai">
             <div class="the-loai">
@@ -190,5 +193,14 @@
             </div>
             <p class="copyright">@ 1997-2026 Netflix, Inc.</p>
     </footer>
+    <script >
+        function xemTrailer(){
+            document.getElementsByClassName("banner")[0].style = "dislay: block";
+            document.getElementsByClassName("banner")[1].style = "dislay: none";
+
+            
+        }
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -45,6 +45,12 @@ header{
     border-radius: 20px;
 }
 .banner-anh{
+    width:95%;
+    /* height:40vh; */
+    margin:20px auto;
+    border-radius: 20px;
+}
+.banner-anh{
     width:100%;
     border-radius: 20px;
 }
