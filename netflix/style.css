@@ -40,19 +40,21 @@ header{
 }
 .banner{
     width:95%;
-    /* height:40vh; */
     margin:20px auto;
     border-radius: 20px;
 }
 .banner-anh{
-    width:95%;
-    /* height:40vh; */
-    margin:20px auto;
+    width: 100%; 
+    height: 800px;     
     border-radius: 20px;
+    /* object-fit: cover;     
+    display: block; */
 }
-.banner-anh{
-    width:100%;
+.banner iframe {
+    width: 100%;
+    height: 700px;
     border-radius: 20px;
+    
 }
 .danh-sach-the-loai{
     width:95%;
