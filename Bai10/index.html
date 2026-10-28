@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ video</title>
+    <style>
+        .video{
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .danh-sach{
+            width: 80%;
+            display: flex;
+            margin:50px auto;
+            justify-content: space-between;
+        }
+        .anh{
+            width: 24%;
+            height: 100px;
+            img{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Màn xem -->
+     <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OmfG5jX1f3g?si=Kqg7q_QsUifZrvKy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3 class="ten">Biển, Đảo Và Em - Mã Dã</h3>
+    </div>
+    <div class="danh-sach">
+        <div class="anh" onclick="chonVideo(1)">
+            <img src="../anh/phim1 (5).png">
+            <p>Trước Khi Em Tồn Tại</p>
+        </div>
+        <div class="anh" onclick="chonVideo(2)">
+            <img src="../anh/phim1 (2).png">
+            <p>Phép Màu</p>
+        </div>
+        <div class="anh" onclick="chonVideo(3)">
+            <img src="../anh/phim1 (3).png">
+            <p>Đêm Trắng</p>
+        </div>
+        <div class="anh" onclick="chonVideo(4)">
+            <img src="../anh/phim1 (4).png">
+            <p>Tìm Lại Bầu Trời</p>
+        </div>
+    </div>
+    <script>
+        var danhSachVid = [
+            {
+                id: 1,
+                ten:"Trước Khi Em Tồn Tại",
+                duongDanAnh:"../anh/phim1 (5).png",
+                duongDanYoutube:"https://www.youtube.com/embed/jtFsZRHUyPE?si=zaGxS98lXezmPQUf"
+            },
+            
+            {
+                id: 2,
+                ten:"Phép Màu",
+                duongDanAnh:"../anh/phim1 (2).png",
+                duongDanYoutube:"https://www.youtube.com/embed/jPjQJYKhhk4?si=MvOdCWVSeK8E-Vci"
+            },
+
+            {
+                id: 3,
+                ten:"Đêm Trắng",
+                duongDanAnh:"../anh/phim1 (3).png",
+                duongDanYoutube:"https://www.youtube.com/embed/bLnuqQ7skww?si=7gwwvRT690zcPr7q"
+            },
+
+            {
+                id: 4,
+                ten:"Tìm Lại Bầu Trời",
+                duongDanAnh:"../anh/phim1 (4).png",
+                duongDanYoutube:"https://www.youtube.com/embed/Q8kohtX2PC4?si=dH7mcG7czScpJCZq"
+            },
+
+        ];
+        function chonVideo(id){
+            for(var i=0;i<danhSachVid.length;i++){
+                if(danhSachVid[i].id == id){
+                    document.getElementsByClassName("ten")[0].innerHTML = danhSachVid[i].ten;
+                    document.getElementsByTagName("iframe")[0].src = danhSachVid[i].duongDanYoutube;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
