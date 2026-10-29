@@ -42,6 +42,7 @@ header{
     width:95%;
     margin:20px auto;
     border-radius: 20px;
+    cursor: pointer;
 }
 .banner-anh{
     width: 100%; 
@@ -70,6 +71,11 @@ header{
     width: 16%;
     height: 19vh;
     border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.phim-poster:hover{
+    transform: scale(1.05);
 }
 
 h3{

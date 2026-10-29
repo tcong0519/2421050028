@@ -151,7 +151,6 @@ var danhSachPhimm = [
 
 var banner = document.getElementsByClassName("banner")[0];
 var trailer = document.getElementsByClassName("banner")[1];
-var iframeTrailer = trailer.getElementsByTagName("iframe")[0];
 
 function xemTrailer() {
     banner.style.display = "none";
@@ -161,23 +160,7 @@ function xemTrailer() {
 function chonPhim(id) {
     for (var i=0;i<danhSachPhimm.length;i++){
         if (danhSachPhimm[i].id == id) {
-            iframeTrailer.src = danhSachPhimm[i].trailer;
-            xemTrailer();
-            break;
+            document.getElementsByTagName("iframe")[0].src = danhSachPhimm[i].trailer;
         }
     }
-}
-
-
-var danhSachPoster = document.getElementsByClassName("phim-poster");
-
-for (var i=0;i<danhSachPoster.length;i++) {
-    danhSachPoster[i].onclick = function () {
-        for (var j=0;j<danhSachPhimm.length;j++) {
-            if(danhSachPhimm[j].banner == this.getAttribute("src")) {
-                chonPhim(danhSachPhimm[j].id);
-                break;
-            }
-        }
-    };
 }
