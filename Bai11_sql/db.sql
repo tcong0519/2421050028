@@ -26,30 +26,40 @@ CREATE TABLE IF NOT EXISTS the_loai (
 );
 
 -- dien_vien
-id key AUTO_INCREMENT int,
-ho_ten varchar(100),
-ngay_sinh date,
+CREATE TABLE IF NOT EXISTS dien_vien (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ho_ten VARCHAR(100) NOT NULL,
+    ngay_sinh DATE
+);
 
 -- dao_dien
-id key AUTO_INCREMENT int,
-ho_ten varchar(100),
-ngay_sinh date,
+CREATE TABLE IF NOT EXISTS dao_dien (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ho_ten VARCHAR(100) NOT NULL,
+    ngay_sinh DATE
+);
 
 --phim
-id key AUTO_INCREMENT int,
-ten_phim varchar(255),
-quoc_gia varchar(100),
-dao_dien_id int,
-nam datetime,
-do_tuoi int,
-mo_ta varchar(255)
+CREATE TABLE IF NOT EXISTS phim (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ten_phim VARCHAR(255),
+    quoc_gia VARCHAR(100),
+    dao_dien_id INT,
+    nam DATETIME,
+    do_tuoi INT,
+    mo_ta VARCHAR(255)
+);
 
 --phim_the_loai
-id key AUTO_INCREMENT int,
-phim_id int,
-the_loai_id int,
+CREATE TABLE IF NOT EXISTS phim_the_loai (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    phim_id INT NOT NULL,
+    the_loai_id INT NOT NULL
+);
 
 --phim_dien_vien
-id key AUTO_INCREMENT int,
-phim_id int,
-dien_vien_id int
+CREATE TABLE IF NOT EXISTS phim_dien_vien (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    phim_id INT NOT NULL,
+    dien_vien_id INT NOT NULL
+);
