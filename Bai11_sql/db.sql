@@ -17,7 +17,7 @@ CREATE TABLE if NOT EXISTS  nguoi_dung (
     ngay_sinh date NOT NULL,
     so_dien_thoai varchar(10) NOT NULL,
     gioi_tinh boolean  NOT NULL
-)
+);
 
 -- the_loai
 CREATE TABLE IF NOT EXISTS the_loai (
