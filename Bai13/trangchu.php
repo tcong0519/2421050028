@@ -6,12 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Trang chu</h1>
-    <?php
-        session_start();
-        if(!isset($_SESSION['dangnhap']) && $_SESSION['dangnhap'] =="thanhcong"){
-            header("Location: dangnhap.php");
-        }
-    ?>
+    <h1>Trang chủ</h1>
 </body>
 </html>
